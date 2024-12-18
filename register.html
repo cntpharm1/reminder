@@ -32,7 +32,7 @@
                     </div>
                     <!-- ฟิลด์สำหรับใส่ชื่อ-สกุล -->
                     <div class="mb-4">
-                        <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="name" placeholder="ชื่อ-สกุล" name="name" required>
+                        <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="name" placeholder="ชื่อ-นามสกุล" name="name" required>
                     </div>
                     <!-- ฟิลด์สำหรับเลือกเพศ -->
                     <div class="mb-4">
@@ -40,7 +40,7 @@
                             <option value="" disabled selected>เลือกเพศ</option>
                             <option value="ชาย">ชาย</option>
                             <option value="หญิง">หญิง</option>
-                            <option value="อื่นๆ">ไม่ระบุ</option>
+                            <option value="ไม่ระบุ">ไม่ระบุ</option>
                         </select>
                     </div>
                     <!-- ฟิลด์สำหรับใส่วันเกิด -->
@@ -57,7 +57,18 @@
                     </div>
                     <!-- ฟิลด์สำหรับใส่ระดับการศึกษา -->
                     <div class="mb-4">
-                        <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="educationLevel" placeholder="ระดับการศึกษา" name="educationLevel" required>
+                        <!--<input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="educationLevel" placeholder="ระดับการศึกษา" name="educationLevel" required> -->
+                        <select class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="educationLevel" name="educationLevel" required>
+                            <option value="" disabled selected>ระดับการศึกษา</option>
+                            <option value="ชาย">ไม่ได้รับการศึกษา</option>
+                            <option value="หญิง">ประถมศึกษา</option>
+                            <option value="ไม่ระบุ">มัธยมศึกษาตอนต้น</option>
+                            <option value="ชาย">มัธยมศึกษาตอนปลาย</option>
+                            <option value="หญิง">อนุปริญญา/ปวส.</option>
+                            <option value="ไม่ระบุ">ปริญญาตรี</option>
+                            <option value="ไม่ระบุ">สูงกว่าปริญญาตรี</option>
+                        </select>
+                        
                     </div>
                     <!-- ฟิลด์สำหรับใส่อาชีพ -->
                     <div class="mb-4">
