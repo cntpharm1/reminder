@@ -67,12 +67,21 @@
                             <option value="หญิง">อนุปริญญา/ปวส.</option>
                             <option value="ไม่ระบุ">ปริญญาตรี</option>
                             <option value="ไม่ระบุ">สูงกว่าปริญญาตรี</option>
-                        </select>
-                        
+                        </select>                        
                     </div>
                     <!-- ฟิลด์สำหรับใส่อาชีพ -->
                     <div class="mb-4">
-                        <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="occupation" placeholder="อาชีพ" name="occupation" required>
+                        <!-- <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="occupation" placeholder="อาชีพ" name="occupation" required> -->
+                        <select class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="occupation" name="occupation" required>
+                            <option value="" disabled selected>อาชีพ</option>
+                            <option value="ชาย">ไม่ได้ประกอบอาชีพ</option>
+                            <option value="หญิง">ค้าขาย/กิจการส่วนตัว</option>
+                            <option value="ไม่ระบุ">รับราชการ</option>
+                            <option value="ชาย">รับจ้าง</option>
+                            <option value="หญิง">เกษตรกรรม</option>
+                            <option value="ไม่ระบุ">นักเรียน/นักศึกษา</option>
+                            <option value="ไม่ระบุ">อื่น ๆ</option>
+                        </select> 
                     </div>
                     <!-- ฟิลด์สำหรับเลือกสถานภาพสมรส -->
                     <div class="mb-4">
@@ -86,7 +95,15 @@
                     </div>
                     <!-- ฟิลด์สำหรับใส่สิทธิการรักษา -->
                     <div class="mb-6">
-                        <input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="medicalRights" placeholder="สิทธิการรักษา" name="medicalRights" required>
+                        <!--<input type="text" class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="medicalRights" placeholder="สิทธิการรักษา" name="medicalRights" required>-->
+                        <select class="input-field w-full border border-slate-300 p-2 text-md rounded-lg" id="medicalRights" name="medicalRights" required>
+                            <option value="" disabled selected>สิทธิการรักษา</option>
+                            <option value="ชาย">สวัสดิการข้าราชการ/รัฐวิสาหกิจ</option>
+                            <option value="หญิง">ประกันสุขภาพถ้วนหน้า(บัตรทอง)</option>
+                            <option value="ไม่ระบุ">ประกันสังคม</option>
+                            <option value="ชาย">ชำระเงินเอง</option>
+                            <option value="หญิง">อื่นๆ</option>                            
+                        </select> 
                     </div>
                 </div>
                 <!-- ปุ่มสำหรับบันทึกข้อมูล -->
