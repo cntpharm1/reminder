@@ -224,11 +224,7 @@
                 } else {
                     // ถ้าไม่มีข้อมูลที่ตรงกับ userId จะแสดงข้อความในคอนโซล
                     console.log('No data found for userId:', userId);
-                }
-            } catch (error) {
-                // ถ้ามีข้อผิดพลาดในการดึงข้อมูล จะทำการล็อกข้อผิดพลาดในคอนโซล
-                console.error('Error fetching data:', error);
-                Swal.fire({
+                    Swal.fire({
                         title: 'ไม่มีข้อมูล',
                         text: 'ไม่พบข้อมูลสำหรับผู้ใช้ของคุณ กรุณาลงทะเบียน',
                         icon: 'warning',
@@ -247,6 +243,11 @@
                             console.log('User canceled the redirect.');
                         }
                     });    
+                }
+            } catch (error) {
+                // ถ้ามีข้อผิดพลาดในการดึงข้อมูล จะทำการล็อกข้อผิดพลาดในคอนโซล
+                console.error('Error fetching data:', error);
+                
             } finally {
                 showLoading(false); // ซ่อนหน้าต่างโหลด
             }
