@@ -228,6 +228,25 @@
             } catch (error) {
                 // ถ้ามีข้อผิดพลาดในการดึงข้อมูล จะทำการล็อกข้อผิดพลาดในคอนโซล
                 console.error('Error fetching data:', error);
+                Swal.fire({
+                        title: 'ไม่มีข้อมูล',
+                        text: 'ไม่พบข้อมูลสำหรับผู้ใช้ของคุณ กรุณาลงทะเบียน',
+                        icon: 'warning',
+                        showCancelButton: false,
+                        confirmButtonText: 'ลงทะเบียน',
+                        cancelButtonText: 'ไม่ใช่'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            liff.openWindow({
+                                url: 'https://liff.line.me/2006710662-MdDaYZw2',
+                                external: false
+                            }).catch((err) => {
+                                console.error('Error opening window:', err);
+                            });
+                        } else {
+                            console.log('User canceled the redirect.');
+                        }
+                    });    
             } finally {
                 showLoading(false); // ซ่อนหน้าต่างโหลด
             }
